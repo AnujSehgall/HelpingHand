@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anuj.helpinghand">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AppCont"
+        android:allowBackup="true"
+        android:icon="@drawable/helping_hand"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home_activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutBsf" />
+        <activity android:name=".Join_Bsf" />
+        <activity android:name=".Bsf_Achiv" />
+        <activity android:name=".Posts_List" />
+        <activity android:name=".Each_Post" />
+        <activity android:name=".Donate_martyr" />
+        <activity android:name=".Donate_to_Post" />
+        <activity android:name=".About_Soldier"></activity>
+    </application>
+
+</manifest>
