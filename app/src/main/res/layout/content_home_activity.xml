@@ -51,8 +51,22 @@
             android:layout_marginLeft="10dp"
             android:layout_below="@+id/textView"
             android:layout_marginTop="25dp"
-            android:text="Helping Hand is an App which is there to help our soldier's family who lost thier lives while protecting us"
+            android:text="@string/intro"
             android:textColor="#000000" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textSize="28dp"
+                android:textStyle="bold|italic"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="25dp"
+                android:text="@string/sayin"
+                android:textColor="#000000" />
+
 
 
         <TextView

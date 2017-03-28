@@ -55,18 +55,22 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="25dp">
 
-        <Button
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:text="Donate TO Post"
-            android:id="@+id/button" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="170dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@drawable/col"
+        android:text="Donate TO Post" />
 
-        <Button
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:text="Donate to Martyr"
-            android:id="@+id/button2"
-            android:layout_gravity="right" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="170dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="@drawable/col"
+        android:text="Donate to Martyr" />
 </FrameLayout>
 
     </LinearLayout>

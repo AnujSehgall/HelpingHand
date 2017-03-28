@@ -81,60 +81,49 @@ public class Home_activity extends AppCompatActivity
             //    Toast.makeText(getApplicationContext(),"Click ListItem Number " + position, Toast.LENGTH_SHORT).show();
                 switch (position) {
                     case 0: Pic_Url="https://s29.postimg.org/4x429t347/Handwara_attack.jpg";
-                            //Info_Url="http://www.json-generator.com/api/json/get/cvEOaQLSoO?indent=2";
                             Info_Url="http://www.json-generator.com/api/json/get/bTwiKgcyjS?indent=2";
-                            post_pic="https://s24.postimg.org/n4nmccl85/1414928675_5383.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bUdNzsfbzC?indent=2";
                             hint="hand";
 
                         break;
                     case 1: Pic_Url="https://s28.postimg.org/egtnh9kzh/baramulla_attack.jpg";
                             Info_Url="http://www.json-generator.com/api/json/get/celSQxZyMi?indent=2";
-                            post_pic="https://s28.postimg.org/7ifu05vgd/LABS_master675.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bWaLyVxisy?indent=2";
                             hint="bara";
                         break;
                     case 2: Pic_Url="https://s24.postimg.org/sejft6tk5/uri_attack.jpg";
                             Info_Url="http://www.json-generator.com/api/json/get/bPLebaGjyq?indent=2";
-                            post_pic="https://s30.postimg.org/4ts2hx0mp/With_Indian_Army_9.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bWaLyVxisy?indent=2";
                             hint="uri";
                         break;
                     case 3: Pic_Url="https://s30.postimg.org/sylk5l1f5/pampore_attack.jpg";
                             Info_Url="http://www.json-generator.com/api/json/get/cvqGuQMpaq?indent=2";
-                            post_pic="https://s23.postimg.org/j7wbijdmj/page5_39.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bWaLyVxisy?indent=2";
                             hint="pam";
                         break;
                     case 4: Pic_Url="https://s30.postimg.org/hpie63qzl/pathankot_air_base7591.jpg";
                             Info_Url="http://www.json-generator.com/api/json/get/cozqSFzNiW?indent=2";
-                            post_pic="https://s24.postimg.org/n4nmccl85/1414928675_5383.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bWaLyVxisy?indent=2";
                             hint="path";
                         break;
                     case 5: Pic_Url="https://s29.postimg.org/m0zynq087/gurdaspur_attack.jpg";
                             Info_Url="http://www.json-generator.com/api/json/get/ckcVspWICW?indent=2";
-                            post_pic="https://s28.postimg.org/7ifu05vgd/LABS_master675.jpg";
-                            post_info="http://www.json-generator.com/api/json/get/bWaLyVxisy?indent=2";
                             hint="gur";
                         break;
                 }
 
-                SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                cd.edit().putString("info", Info_Url).commit();
-
                 Intent i = new Intent(Home_activity.this,Each_Post.class);
+
+                SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                cd.edit().putString("info", Info_Url).apply();
+
+
                 SharedPreferences ab = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                ab.edit().putString("URL", Pic_Url).commit();
+                ab.edit().putString("URL", Pic_Url).apply();
 
                 SharedPreferences ef = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                ef.edit().putString("post", post_pic).commit();
+                ef.edit().putString("post", post_pic).apply();
 
                 SharedPreferences gh = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                gh.edit().putString("ac", post_info).commit();
+                gh.edit().putString("ac", post_info).apply();
 
                 SharedPreferences ij = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                ij.edit().putString("hint", hint).commit();
+                ij.edit().putString("hint", hint).apply();
 
                 startActivity(i);
             }
@@ -154,7 +143,7 @@ public class Home_activity extends AppCompatActivity
 
         int delay = 5000; // delay for 5 sec.
 
-        int period = 3500; // repeat every 14 sec.
+        int period = 3500; // repeat every 3.5 sec.
 
         Timer timer = new Timer();
 
