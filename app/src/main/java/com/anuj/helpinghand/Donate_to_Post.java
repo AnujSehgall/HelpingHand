@@ -31,7 +31,7 @@ import org.json.JSONObject;
 public class Donate_to_Post extends AppCompatActivity {
 
     ImageView Post;
-    TextView pname,about_post,detoll,bank_det;
+    TextView pname,about_post,detoll;
     Button homebtn,soldier,paytm,card,bankbtn,chk;
 
     private static String TAG = Donate_to_Post.class.getSimpleName();
@@ -50,13 +50,6 @@ public class Donate_to_Post extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate_to__post);
 
-/*
-        SharedPreferences ef = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String post = ef.getString("post", "");
-
-        SharedPreferences gh = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        urlJsonObj=gh.getString("ac", "");
-*/
         SharedPreferences ij = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         phint=ij.getString("hint", "");
 
@@ -133,7 +126,7 @@ public class Donate_to_Post extends AppCompatActivity {
                         Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
                         intent.setType("text/plain");
                         intent.putExtra(Intent.EXTRA_SUBJECT, "A message to greet");
-                        intent.setData(Uri.parse("mailto:Respemail")); // or just "mailto:" for blank
+                        intent.setData(Uri.parse("mailto:"+Respemail)); // or just "mailto:" for blank
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
                         startActivity(intent);
                     }
@@ -173,7 +166,7 @@ public class Donate_to_Post extends AppCompatActivity {
                         Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
                         intent.setType("text/plain");
                         intent.putExtra(Intent.EXTRA_SUBJECT, "A message to greet");
-                        intent.setData(Uri.parse("mailto:Respemail")); // or just "mailto:" for blank
+                        intent.setData(Uri.parse("mailto:"+Respemail)); // or just "mailto:" for blank
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
                         startActivity(intent);
                     }

@@ -16,58 +16,104 @@
             android:background="@drawable/background"
             android:orientation="vertical">
 
-
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="200dp"
-                android:id="@+id/sol_pic"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:id="@+id/img"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/sname" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="25dp"
-                android:id="@+id/post_name"/>
-            <!--<TextView
+                android:id="@+id/abt"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About The Attack.."
+                android:id="@+id/bank"
                 android:textSize="25dp"
+                android:textStyle="italic|bold"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
-                android:layout_below="@id/post_name"/>
-            --><TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                android:id="@+id/content"
-                />
+                android:text="Donate geneourously using these payment methods."/>
+
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp">
+                <Button
+                    android:layout_width="152dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/paytm"
+                    android:id="@+id/paytm"/>
+
+                <Button
+                    android:id="@+id/card"
+                    android:layout_width="154dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/visa" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="25dp">
 
                 <Button
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="Back to Home"
-                    android:id="@+id/button" />
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bank"
+                    android:id="@+id/bankno"/>
 
                 <Button
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="Donate to Post"
-                    android:id="@+id/button2"
-                    android:layout_gravity="right" />
-            </FrameLayout>
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/cheque"
+                    android:background="@drawable/cheque" />
 
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/col"
+                    android:text="Back To Home"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/col"
+                    android:text="Donate to Soldier's Family "
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

@@ -21,6 +21,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     private Context mContext;
     private List<Album> albumList;
     public int hint;
+    public String phint;
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -53,43 +54,121 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Album album = albumList.get(position);
         holder.title.setText(album.getName());
+        phint=album.getHint();
 
-        switch (position){
+        if (phint.equals("hand")){      //TODO -- ADD Pictures
 
-            case 0: Glide.with(mContext).load("http://www.india.com/wp-content/uploads/2016/01/Martyr-6-Sepoy-Jagdish-Chand.jpg").into(holder.thumbnail);
-                break;
-            case 1: Glide.with(mContext).load("http://media2.intoday.in/dailyo//story/embed/201601/saif2mbed_010416021542.jpg").into(holder.thumbnail);
-                break;
-            case 2: Glide.with(mContext).load("http://timesofindia.indiatimes.com/thumb/msid-55169932,width-400,resizemode-4/55169932.jpg").into(holder.thumbnail);
-                break;
-            case 3: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli1.jpg").into(holder.thumbnail);
-                break;
-            case 4: Glide.with(mContext).load("https://s14.postimg.org/ggg626ogx/exper.jpg").into(holder.thumbnail);
-                break;
-            case 5: Glide.with(mContext).load("https://s9.postimg.org/j5wu62d1r/pubtpt.jpg").into(holder.thumbnail);
-                break;
-            case 6: Glide.with(mContext).load("https://s13.postimg.org/8tz46rlh3/rest.jpg").into(holder.thumbnail);
-                break;
-            case 7:  Glide.with(mContext).load("http://elementarycarrental.com/wp-content/uploads/2014/12/holiday-car-rental.jpg").into(holder.thumbnail);
-                break;
-            case 8: Glide.with(mContext).load("https://s14.postimg.org/pjszs81fl/shopping.jpg").into(holder.thumbnail);
-                break;
-            case 9: Glide.with(mContext).load("https://s21.postimg.org/6ji8leg9j/medical.jpg").into(holder.thumbnail);
-                break;
+            switch (position){
+
+                case 0: Glide.with(mContext).load("http://www.india.com/wp-content/uploads/2016/01/Martyr-6-Sepoy-Jagdish-Chand.jpg").into(holder.thumbnail);
+                    break;
+                case 1: Glide.with(mContext).load("http://media2.intoday.in/dailyo//story/embed/201601/saif2mbed_010416021542.jpg").into(holder.thumbnail);
+                    break;
+                case 2: Glide.with(mContext).load("http://timesofindia.indiatimes.com/thumb/msid-55169932,width-400,resizemode-4/55169932.jpg").into(holder.thumbnail);
+                    break;
+                case 3: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli1.jpg").into(holder.thumbnail);
+                    break;
+                case 4: Glide.with(mContext).load("http://i.dailymail.co.uk/i/pix/2013/10/17/article-2463622-18C98DB700000578-464_306x423.jpg").into(holder.thumbnail);
+                    break;
+                case 5: Glide.with(mContext).load("http://groundreport.com/wp-content/uploads/2014/04/army-major.jpg").into(holder.thumbnail);
+                    break;
+                case 6: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli4.jpg").into(holder.thumbnail);
+                    break;
+                case 7:  Glide.with(mContext).load("http://cloudfront.timesnow.tv/media/SUB_KARNAIL_SINGH.jpg").into(holder.thumbnail);
+                    break;
+                case 8: Glide.with(mContext).load("http://media2.intoday.in/indiatoday/images/stories/kargil-2_650_081914092446.jpg").into(holder.thumbnail);
+                    break;
+                case 9: Glide.with(mContext).load("http://www.sainionline.com/_/rsrc/1472780994377/sainis-in-army-and-police/Major%20Harminder%20Pal%20Singh%20Saini%20%28SC%29.jpg").into(holder.thumbnail);
+                    break;
+            }
         }
+
+        else if (phint.equals("bara")){
+            switch (position){
+
+                case 0: Glide.with(mContext).load("http://media2.intoday.in/dailyo//story/embed/201601/saif2mbed_010416021542.jpg").into(holder.thumbnail);
+                    break;
+                case 1: Glide.with(mContext).load("http://www.india.com/wp-content/uploads/2016/01/Martyr-6-Sepoy-Jagdish-Chand.jpg").into(holder.thumbnail);
+                    break;
+                case 2: Glide.with(mContext).load("http://timesofindia.indiatimes.com/thumb/msid-55169932,width-400,resizemode-4/55169932.jpg").into(holder.thumbnail);
+                    break;
+                case 3: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli1.jpg").into(holder.thumbnail);
+                    break;
+                case 4: Glide.with(mContext).load("http://i.dailymail.co.uk/i/pix/2013/10/17/article-2463622-18C98DB700000578-464_306x423.jpg").into(holder.thumbnail);
+                    break;
+                case 5: Glide.with(mContext).load("http://groundreport.com/wp-content/uploads/2014/04/army-major.jpg").into(holder.thumbnail);
+                    break;
+                case 6: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli4.jpg").into(holder.thumbnail);
+                    break;
+                case 7:  Glide.with(mContext).load("http://cloudfront.timesnow.tv/media/SUB_KARNAIL_SINGH.jpg").into(holder.thumbnail);
+                    break;
+                case 8: Glide.with(mContext).load("http://media2.intoday.in/indiatoday/images/stories/kargil-2_650_081914092446.jpg").into(holder.thumbnail);
+                    break;
+                case 9: Glide.with(mContext).load("http://www.sainionline.com/_/rsrc/1472780994377/sainis-in-army-and-police/Major%20Harminder%20Pal%20Singh%20Saini%20%28SC%29.jpg").into(holder.thumbnail);
+                    break;
+            }
+        }
+
+        else {
+            switch (position){
+
+                case 0: Glide.with(mContext).load("http://timesofindia.indiatimes.com/thumb/msid-55169932,width-400,resizemode-4/55169932.jpg").into(holder.thumbnail);
+                    break;
+                case 1: Glide.with(mContext).load("http://www.india.com/wp-content/uploads/2016/01/Martyr-6-Sepoy-Jagdish-Chand.jpg").into(holder.thumbnail);
+                    break;
+                case 2: Glide.with(mContext).load("http://media2.intoday.in/dailyo//story/embed/201601/saif2mbed_010416021542.jpg").into(holder.thumbnail);
+                    break;
+                case 3: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli1.jpg").into(holder.thumbnail);
+                    break;
+                case 4: Glide.with(mContext).load("http://i.dailymail.co.uk/i/pix/2013/10/17/article-2463622-18C98DB700000578-464_306x423.jpg").into(holder.thumbnail);
+                    break;
+                case 5: Glide.with(mContext).load("http://groundreport.com/wp-content/uploads/2014/04/army-major.jpg").into(holder.thumbnail);
+                    break;
+                case 6: Glide.with(mContext).load("http://im.rediff.com/news/2013/jan/25sli4.jpg").into(holder.thumbnail);
+                    break;
+                case 7:  Glide.with(mContext).load("http://cloudfront.timesnow.tv/media/SUB_KARNAIL_SINGH.jpg").into(holder.thumbnail);
+                    break;
+                case 8: Glide.with(mContext).load("http://media2.intoday.in/indiatoday/images/stories/kargil-2_650_081914092446.jpg").into(holder.thumbnail);
+                    break;
+                case 9: Glide.with(mContext).load("http://www.sainionline.com/_/rsrc/1472780994377/sainis-in-army-and-police/Major%20Harminder%20Pal%20Singh%20Saini%20%28SC%29.jpg").into(holder.thumbnail);
+                    break;
+            }
+        }
+
+
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (position == 1) {
-                    //Toast.makeText(mContext,"pos = 1",Toast.LENGTH_SHORT).show();
-                    hint=1;
+                switch (position){
+
+                    case 0 : hint =0;
+                        break;
+                    case 1: hint=1;
+                        break;
+                    case 2: hint=2;
+                        break;
+                    case 3: hint=3;
+                        break;
+                    case 4: hint=4;
+                        break;
+                    case 5: hint=5;
+                        break;
+                    case 6: hint=6;
+                        break;
+                    case 7: hint=7;
+                        break;
+                    case 8: hint=8;
+                        break;
+                    case 9: hint=9;
+                        break;
+                }
                     SharedPreferences kl = PreferenceManager.getDefaultSharedPreferences(mContext);
-                    kl.edit().putInt("pos", hint).commit();
+                    kl.edit().putInt("pos", hint).apply();
                     Intent i= new Intent(mContext,About_Soldier.class);
                     mContext.startActivity(i);
 
-                }
+
             }
         });
 
