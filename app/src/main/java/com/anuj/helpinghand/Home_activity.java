@@ -278,7 +278,11 @@ public class Home_activity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
+            //Todo
+
         } else if (id == R.id.nav_send) {
+
+            //Todo
 
         }
 
