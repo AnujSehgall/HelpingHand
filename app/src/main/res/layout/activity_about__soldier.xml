@@ -110,7 +110,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="right"
                     android:background="@drawable/col"
-                    android:text="Donate to Soldier's Family "
+                    android:text="Donate to the Post "
                     android:textSize="18dp"
                     android:textStyle="bold" />
             </FrameLayout>

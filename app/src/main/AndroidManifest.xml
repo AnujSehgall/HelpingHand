@@ -33,7 +33,6 @@
         <activity android:name=".AboutBsf" />
         <activity android:name=".Join_Bsf" />
         <activity android:name=".Bsf_Achiv" />
-        <activity android:name=".Posts_List" />
         <activity android:name=".Each_Post" />
         <activity android:name=".Donate_martyr" />
         <activity android:name=".Donate_to_Post" />

@@ -2,6 +2,7 @@ package com.anuj.helpinghand;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -41,7 +42,7 @@ public class Home_activity extends AppCompatActivity
     ImageView slidingimage;
     public String Pic_Url,Info_Url,post_pic,post_info,hint;
     private int[] IMAGE_IDS = {
-            R.drawable.bsfnew, R.drawable.bsfnew, R.drawable.main_4,R.drawable.border
+            R.drawable.army, R.drawable.bsfnew, R.drawable.crpf
 
     };
 
@@ -188,19 +189,9 @@ public class Home_activity extends AppCompatActivity
             });
         }
 
-        if (currentimageindex==3){
-            slidingimage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent l = new Intent(Home_activity.this,Posts_List.class);
-                    startActivity(l);
-
-                }
-            });
-        }
         currentimageindex++;
 
-        if (currentimageindex>3){
+        if (currentimageindex>2){
             currentimageindex=0;
         }
 
@@ -264,18 +255,18 @@ public class Home_activity extends AppCompatActivity
             startActivity(k);
 
 
-        } else if (id == R.id.nav_manage) {
-            Intent l = new Intent(Home_activity.this,Posts_List.class);
-            startActivity(l);
-
-
-        } else if (id == R.id.nav_share) {
+        }  else if (id == R.id.nav_share) {
 
             //Todo
 
         } else if (id == R.id.nav_send) {
 
-            //Todo
+            Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback for Helping Hand");
+            intent.setData(Uri.parse("mailto: anujsehgal.04@gmail.com")); // or just "mailto:" for blank
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+            startActivity(intent);
 
         }
 

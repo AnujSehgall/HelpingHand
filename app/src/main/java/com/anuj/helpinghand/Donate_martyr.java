@@ -95,7 +95,7 @@ public class Donate_martyr extends AppCompatActivity {
                 }
 
             }, delay, period);
-            Glide.with(this).load(R.drawable.border).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.drawable.background).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
