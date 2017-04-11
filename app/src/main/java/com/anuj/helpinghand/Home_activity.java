@@ -2,18 +2,9 @@ package com.anuj.helpinghand;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.*;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,12 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
-import android.widget.Gallery;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 
-import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -48,7 +41,7 @@ public class Home_activity extends AppCompatActivity
     ImageView slidingimage;
     public String Pic_Url,Info_Url,post_pic,post_info,hint;
     private int[] IMAGE_IDS = {
-            R.drawable.bsfnew, R.drawable.top, R.drawable.main_4,R.drawable.border
+            R.drawable.bsfnew, R.drawable.bsfnew, R.drawable.main_4,R.drawable.border
 
     };
 

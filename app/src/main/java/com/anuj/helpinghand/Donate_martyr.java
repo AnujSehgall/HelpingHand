@@ -251,7 +251,7 @@ public class Donate_martyr extends AppCompatActivity {
             albumList.add(a);
             a = new Album("CT RAM BAHAL", 11, covers[0],hint);
             albumList.add(a);
-            a = new Album("Maps", 12, covers[0],hint);
+            a = new Album("HC RAM CHANDER SINGH", 12, covers[0],hint);
             albumList.add(a);
             a = new Album("CT AMANDEEP SINGH", 14, covers[0],hint);
             albumList.add(a);
